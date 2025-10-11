@@ -22,5 +22,5 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 **Total images**: 10,858
 
-
+[AI-MedLeafX Dataset on Mendeley Data](https://data.mendeley.com/datasets/zz7r5y4dc6/1)
 
