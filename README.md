@@ -1,3 +1,12 @@
+| Name                     | Student ID       |
+|-------------------------|------------------|
+| Md Riyad Hossain        | 2022-3-60-156    |
+| Mehjarin Aklima Jerin   | 2022-3-60-325    |
+| Rafid Rahman            | 2022-2-60-116    |
+| Ishraque Manzur         | 2021-3-60-130    |
+
+
+
 # Medicinal Plant Diagnosis Dataset
 
 ## Description
