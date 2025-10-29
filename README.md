@@ -33,5 +33,5 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 [AI-MedLeafX Dataset on Mendeley Data](https://data.mendeley.com/datasets/zz7r5y4dc6/1)
 
-##We evaluated eight different deep learning models on the dataset, and InceptionV3 achieved the best performance among them.
+## We evaluated eight different deep learning models on the dataset, and InceptionV3 achieved the best performance among them.
 
