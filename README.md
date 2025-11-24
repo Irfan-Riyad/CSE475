@@ -44,6 +44,7 @@ The following models were benchmarked:
 * **Inception (Winner)**
 * MobileNet
 * NASNet
+* VGG16
 * ResNet
 * **VGG19 (Strong Contender)**
 
