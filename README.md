@@ -33,5 +33,33 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 [AI-MedLeafX Dataset on Mendeley Data](https://data.mendeley.com/datasets/zz7r5y4dc6/1)
 
-## We evaluated eight different deep learning models on the dataset, and InceptionV3 achieved the best performance among them.
+## 📈 Performance Overview
+
+We evaluated several state-of-the-art pre-trained deep learning models to identify the optimal architecture for this specific task.
+
+### Tested Architectures
+The following models were benchmarked:
+* DenseNet201
+* EfficientNet
+* **Inception (Winner)**
+* MobileNet
+* NASNet
+* VGG16
+* ResNet
+* **VGG19 (Strong Contender)**
+
+### Methodology
+To ensure robustness, each model was tested across a spectrum of data distributions. We utilized nine distinct **Train-Test splits**:
+* 10:90 through 90:10 (in 10% increments)
+
+### 🏁 Conclusion & Key Findings
+While both **Inception** and **VGG19** showed strong performance, **Inception** proved to be the most effective model for our dataset.
+
+| Metric | Result |
+| :--- | :--- |
+| **Best Model** | **Inception** |
+| **Highest Accuracy** | **98.13%** |
+| **Best Split Ratio** | **70:30** |
+
+*Inception was selected for the final deployment due to its excellent balance of feature extraction capabilities and overall classification accuracy.*
 
