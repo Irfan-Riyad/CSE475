@@ -15,19 +15,19 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 ## Categories
 
-1. **Cinnamomum Camphora Healthy Leaf**: 800 images
-2. **Cinnamomum Camphora Bacterial Spot**: 801 images
-3. **Cinnamomum Camphora Shot Hole**: 795 images
-4. **Terminalia Chebula Bacterial Spot**: 803 images
-5. **Terminalia Chebula Healthy Leaf**: 816 images
-6. **Terminalia Chebula Shot Hole**: 802 images
-7. **Moringa Oleifera Healthy Leaf**: 860 images
-8. **Moringa Oleifera Bacterial Spot**: 804 images
-9. **Moringa Oleifera Yellow Leaf**: 814 images
-10. **Azadirachta Indica Healthy Leaf**: 1021 images
-11. **Azadirachta Indica Shot Hole**: 834 images
-12. **Azadirachta Indica Powdery Mildew**: 854 images
-13. **Azadirachta Indica Yellow Leaf**: 854 images
+1. **Camphor_Healthy Leaf**: 800 images
+2. **Camphor_Bacterial Spot**: 801 images
+3. **Camphor_Shot Hole**: 795 images
+4. **HariTaki_Bacterial Spot**: 803 images
+5. **HariTaki_Healthy Leaf**: 816 images
+6. **HariTaki_Shot Hole**: 802 images
+7. **Sojina_Healthy Leaf**: 860 images
+8. **Sojina_Bacterial Spot**: 804 images
+9. **Sojina_Yellow Leaf**: 814 images
+10. **Neem_Healthy Leaf**: 1021 images
+11. **Neem_Shot Hole Leaf**: 834 images
+12. **Neem_Powdery Mildew**: 854 images
+13. **Neem_Yellow Leaf**: 854 images
 
 **Total images**: 10,858
 
