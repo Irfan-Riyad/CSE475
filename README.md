@@ -37,16 +37,19 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 We evaluated several state-of-the-art pre-trained deep learning models to identify the optimal architecture for this specific task.
 
-### Tested Architectures
-The following models were benchmarked:
-* DenseNet201
-* EfficientNet
-* **Inception (Winner)**
-* MobileNet
-* NASNet
-* VGG16
-* ResNet
-* **VGG19 (Strong Contender)**
+### Tested Architectures (with Best Results)
+
+| Model | Best Accuracy (%) | Train : Test Split | Remark |
+|------|------------------|--------------------|--------|
+| DenseNet201 | 92.97 | 70 : 30 | — |
+| EfficientNet (B5) | 78.91 | 90 : 10 | — |
+| **InceptionV3** | **98.13** | **70 : 30** | **Winner** |
+| MobileNetV2 | 75.51 | 80 : 20 | — |
+| NASNet | 89.96 | 90 : 10 | — |
+| VGG16 | 89.87 | 80 : 20 | — |
+| ResNet50 | 89.04 | 90 : 10 | — |
+| **VGG19** | **97.51** | **90 : 10** | **Strong Contender** |
+
 
 ### Methodology
 To ensure robustness, each model was tested across a spectrum of data distributions. We utilized nine distinct **Train-Test splits**:
