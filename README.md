@@ -37,29 +37,41 @@ The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 orig
 
 We evaluated several state-of-the-art pre-trained deep learning models to identify the optimal architecture for this specific task.
 
-### Tested Architectures
-The following models were benchmarked:
-* DenseNet201
-* EfficientNet
-* **Inception (Winner)**
-* MobileNet
-* NASNet
-* VGG16
-* ResNet
-* **VGG19 (Strong Contender)**
+### Tested Architectures (with Best Results)
 
-### Methodology
+| Model | Best Accuracy (%) | Train : Test Split | Remark |
+|------|------------------|--------------------|--------|
+| DenseNet201 | 92.97 | 70 : 30 | — |
+| EfficientNet (B5) | 78.91 | 90 : 10 | — |
+| **InceptionV3** | **98.13** | **70 : 30** | **Winner** |
+| MobileNetV2 | 75.51 | 80 : 20 | — |
+| NASNet | 89.96 | 90 : 10 | — |
+| VGG16 | 89.87 | 80 : 20 | — |
+| ResNet50 | 89.04 | 90 : 10 | — |
+| **VGG19** | **97.51** | **90 : 10** | **Strong Contender** |
+
+
 To ensure robustness, each model was tested across a spectrum of data distributions. We utilized nine distinct **Train-Test splits**:
 * 10:90 through 90:10 (in 10% increments)
 
-### 🏁 Conclusion & Key Findings
+### Key Findings
 While both **Inception** and **VGG19** showed strong performance, **Inception** proved to be the most effective model for our dataset.
 
-| Metric | Result |
-| :--- | :--- |
-| **Best Model** | **Inception** |
-| **Highest Accuracy** | **98.13%** |
-| **Best Split Ratio** | **70:30** |
+### Self-Supervised Learning (SSL) Experiments  
+**Models:** DINOv2 · MAE · MoCo v3 · BYOL · SimCLR
 
-*Inception was selected for the final deployment due to its excellent balance of feature extraction capabilities and overall classification accuracy.*
+To improve overall model accuracy, we experimented with multiple **self-supervised learning (SSL)** methods and backbone configurations. Our objective was to strengthen feature representations through iterative experimentation rather than relying on a single training strategy.
+
+#### Experimental Setup and Findings
+
+- **SimCLR with an Inception backbone** was tested first but produced very low accuracy and was not effective for this dataset.
+- **SimCLR with a ResNet-50 backbone** significantly improved performance, achieving **85% accuracy**.
+- To further enhance representation learning, **Vision Transformer (ViT)** backbones were used for all SSL models **except SimCLR**.
+- Multiple feature extraction and fine-tuning strategies were evaluated across all SSL approaches.
+
+#### Best Result
+
+Among all SSL models, **DINOv2 with a ViT backbone** achieved the **highest accuracy of 97.05%**, making it the best-performing SSL method in our experiments.
+
+These results demonstrate the strong effectiveness of transformer-based self-supervised representations for the Medicinal Plant Diagnosis task.
 
