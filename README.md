@@ -65,7 +65,6 @@ To improve overall model accuracy, we experimented with multiple **self-supervis
 #### Experimental Setup and Findings
 
 - **SimCLR with an Inception backbone** was tested first but produced very low accuracy and was not effective for this dataset.
-- **SimCLR with a ResNet-50 backbone** significantly improved performance, achieving **85% accuracy**.
 - To further enhance representation learning, **Vision Transformer (ViT)** backbones were used for all SSL models **except SimCLR**.
 - Multiple feature extraction and fine-tuning strategies were evaluated across all SSL approaches.
 
@@ -73,10 +72,10 @@ To improve overall model accuracy, we experimented with multiple **self-supervis
 
 | Model | Accuracy (%) | Downstream Classifier | Evaluation Report | Diagram |
 |------|-------------|----------------------|-------------------|---------|
-| **MoCo v3** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
-| **SimCLR** | 87.85% |  SVM | [View Report](#) | [View Diagram](#) |
-| **MEW** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
-| **BYOL** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
+| **MoCo v3** | 94.98% | SVM | Coming Soon | Coming Soon |
+| **SimCLR** | 87.85% |  SVM | Coming Soon | Coming Soon |
+| **MEW** | 82.41% | MLP  | Coming Soon | Coming Soon |
+| **BYOL** | 85.48% | MLP  | Coming Soon | Coming Soon |
 | **DINOv2** | 98.07% | SVM | [View Report](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Dinov2_Report.pdf) | [View Diagram](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Diagrams/Diagrams.pdf) |
 
 
