@@ -1,4 +1,4 @@
-# Medicinal Plant Diagnosis using Deep Learning
+# Medicinal Plant Diagnosis 
 
 ## 📄 Project Overview
 This project presents a comprehensive study on the diagnosis of medicinal plant diseases using advanced Deep Learning techniques. We utilize the **AI-MedLeafX** dataset to evaluate both Supervised Learning benchmarks and state-of-the-art Self-Supervised Learning (SSL) frameworks.
