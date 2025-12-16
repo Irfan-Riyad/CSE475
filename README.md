@@ -82,7 +82,7 @@ To improve overall model accuracy, we experimented with multiple **self-supervis
 
 #### Best Result
 
-Among all SSL models, **DINOv2 with a ViT backbone** achieved the **highest accuracy of 97.05%**, making it the best-performing SSL method in our experiments.
+Among all SSL models, **DINOv2 with a ViT backbone** achieved the **highest accuracy of 98.07%**, making it the best-performing SSL method in our experiments.
 
 These results demonstrate the strong effectiveness of transformer-based self-supervised representations for the Medicinal Plant Diagnosis task.
 
