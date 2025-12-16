@@ -1,88 +1,78 @@
-| Name                     | Student ID       |
-|-------------------------|------------------|
-| Md Riyad Hossain        | 2022-3-60-156    |
-| Mehjarin Aklima Jerin   | 2022-3-60-325    |
-| Rafid Rahman            | 2022-2-60-116    |
-| Ishraque Manzur         | 2021-3-60-130    |
+# Medicinal Plant Diagnosis using Deep Learning
 
+## 📄 Project Overview
+This project presents a comprehensive study on the diagnosis of medicinal plant diseases using advanced Deep Learning techniques. We utilize the **AI-MedLeafX** dataset to evaluate both Supervised Learning benchmarks and state-of-the-art Self-Supervised Learning (SSL) frameworks.
 
+Our research focuses on four specific medicinal plant species—*Cinnamomum camphora*, *Terminalia Chebula*, *Moringa Oleifera*, and *Azadirachta Indica*—and identifies phytopathological conditions such as Bacterial Spot, Shot Hole, and Yellow Leaf Disease.
 
-# Medicinal Plant Diagnosis Dataset
+---
 
-## Description
+## 👥 Contributors
 
-The **Medicinal Plant Diagnosis** dataset is a curated collection of 10,858 original images and 65,178 augmented images of medicinal plant leaves, categorized into healthy and diseased conditions. The dataset primarily focuses on four medicinal plant species—**Cinnamomum camphora**, **Terminalia Chebula**, **Moringa Oleifera**, and **Azadirachta Indica**—and covers common leaf diseases such as **Bacterial Spot**, **Shot Hole**, **Powdery Mildew**, and **Yellow Leaf Disease**.
+| Name | Student ID |
+| :--- | :--- |
+| **Md Riyad Hossain** | 2022-3-60-156 |
+| **Mehjarin Aklima Jerin** | 2022-3-60-325 |
+| **Rafid Rahman** | 2022-2-60-116 |
+| **Ishraque Manzur** | 2021-3-60-130 |
 
-## Categories
+---
 
-1. **Camphor_Healthy Leaf**: 800 images
-2. **Camphor_Bacterial Spot**: 801 images
-3. **Camphor_Shot Hole**: 795 images
-4. **HariTaki_Bacterial Spot**: 803 images
-5. **HariTaki_Healthy Leaf**: 816 images
-6. **HariTaki_Shot Hole**: 802 images
-7. **Sojina_Healthy Leaf**: 860 images
-8. **Sojina_Bacterial Spot**: 804 images
-9. **Sojina_Yellow Leaf**: 814 images
-10. **Neem_Healthy Leaf**: 1021 images
-11. **Neem_Shot Hole Leaf**: 834 images
-12. **Neem_Powdery Mildew**: 854 images
-13. **Neem_Yellow Leaf**: 854 images
+## 📂 Repository Structure
 
-**Total images**: 10,858
+This repository is organized as follows:
 
-[AI-MedLeafX Dataset on Mendeley Data](https://data.mendeley.com/datasets/zz7r5y4dc6/1)
+* **`Code/`**: Contains the source code for data preprocessing, model training, and evaluation scripts.
+* **`Reports/`**: Detailed performance reports, and architectural diagrams (e.g., DINOv2 analysis).
 
-## 📈 Performance Overview
+---
 
-We evaluated several state-of-the-art pre-trained deep learning models to identify the optimal architecture for this specific task.
+## 🍃 Dataset: AI-MedLeafX
 
-### Tested Architectures (with Best Results)
+The dataset comprises **10,858 original images** and **65,178 augmented images**. It is curated to ensure diversity across healthy and diseased samples.
 
-| Model | Best Accuracy (%) | Train : Test Split | Remark |
-|------|------------------|--------------------|--------|
-| DenseNet201 | 92.97 | 70 : 30 | — |
-| EfficientNet (B5) | 78.91 | 90 : 10 | — |
-| **InceptionV3** | **98.13** | **70 : 30** | **Winner** |
-| MobileNetV2 | 75.51 | 80 : 20 | — |
-| NASNet | 89.96 | 90 : 10 | — |
-| VGG16 | 89.87 | 80 : 20 | — |
-| ResNet50 | 89.04 | 90 : 10 | — |
-| **VGG19** | **97.51** | **90 : 10** | **Strong Contender** |
+**🔗 [Access Dataset on Mendeley Data](https://data.mendeley.com/datasets/zz7r5y4dc6/1)**
 
+### Class Distribution
+| Plant Species | Condition | Image Count |
+| :--- | :--- | :--- |
+| **Camphor** | Healthy, Bacterial Spot, Shot Hole | 2,396 |
+| **Haritaki** | Healthy, Bacterial Spot, Shot Hole | 2,421 |
+| **Sojina** | Healthy, Bacterial Spot, Yellow Leaf | 2,478 |
+| **Neem** | Healthy, Shot Hole, Powdery Mildew, Yellow Leaf | 3,563 |
+| **Total** | | **10,858** |
 
-To ensure robustness, each model was tested across a spectrum of data distributions. We utilized nine distinct **Train-Test splits**:
-* 10:90 through 90:10 (in 10% increments)
+---
 
-### Key Findings
-While both **Inception** and **VGG19** showed strong performance, **Inception** proved to be the most effective model for our dataset.
+## 📈 Supervised Learning Benchmarks
 
-### Self-Supervised Learning (SSL) Experiments  
-**Models:** DINOv2 · MAE · MoCo v3 · BYOL · SimCLR
+We evaluated multiple pre-trained architectures across nine distinct **Train-Test splits** (10:90 to 90:10) to determine model robustness.
 
-To improve overall model accuracy, we experimented with multiple **self-supervised learning (SSL)** methods and backbone configurations. Our objective was to strengthen feature representations through iterative experimentation rather than relying on a single training strategy.
+| Model Architecture | Best Accuracy (%) | Optimal Split | Remark |
+| :--- | :--- | :--- | :--- |
+| **InceptionV3** | **98.13%** | **70 : 30** | **🏆 Best Model** |
+| **VGG19** | **97.51%** | **90 : 10** | **Strong Contender** |
+| DenseNet201 | 92.97% | 70 : 30 | — |
+| NASNet | 89.96% | 90 : 10 | — |
+| VGG16 | 89.87% | 80 : 20 | — |
+| ResNet50 | 89.04% | 90 : 10 | — |
+| EfficientNet (B5) | 78.91% | 90 : 10 | — |
+| MobileNetV2 | 75.51% | 80 : 20 | — |
 
-#### Experimental Setup and Findings
+---
 
-- **SimCLR with an Inception backbone** was tested first but produced very low accuracy and was not effective for this dataset.
-- To further enhance representation learning, **Vision Transformer (ViT)** backbones were used for all SSL models **except SimCLR**.
-- Multiple feature extraction and fine-tuning strategies were evaluated across all SSL approaches.
+## 🧠 Self-Supervised Learning (SSL) Experiments
 
-## Self-Supervised Model Performance
+To enhance feature representation and label efficiency, we experimented with several SSL frameworks. **Vision Transformer (ViT)** backbones were utilized for most models to leverage global attention mechanisms, replacing the initial Inception backbones which showed lower convergence in SSL tasks.
 
-| Model | Accuracy (%) | Downstream Classifier | Evaluation Report | Diagram |
-|------|-------------|----------------------|-------------------|---------|
-| **MoCo v3** | 94.98% | SVM | Coming Soon | Coming Soon |
-| **SimCLR** | 87.85% |  SVM | Coming Soon | Coming Soon |
-| **MEW** | 82.41% | MLP  | Coming Soon | Coming Soon |
-| **BYOL** | 85.48% | MLP  | Coming Soon | Coming Soon |
-| **DINOv2** | 98.07% | SVM | [View Report](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Dinov2_Report.pdf) | [View Diagram](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Diagrams/Diagrams.pdf) |
+### SSL Performance Metrics
 
+| Model | Accuracy (%) | Downstream Classifier | Resources |
+| :--- | :--- | :--- | :--- |
+| **DINOv2** | **98.07%** | **SVM** | [📄 Report](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Dinov2_Report.pdf) \| [📊 Diagram](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Diagrams/Diagrams.pdf) |
+| **MoCo v3** | 94.98% | SVM | *Coming Soon* |
+| **SimCLR** | 87.85% | SVM | *Coming Soon* |
+| **BYOL** | 85.48% | MLP | *Coming Soon* |
+| **MEW** | 82.41% | MLP | *Coming Soon* |
 
-
-#### Best Result
-
-Among all SSL models, **DINOv2 with a ViT backbone** achieved the **highest accuracy of 98.07%**, making it the best-performing SSL method in our experiments.
-
-These results demonstrate the strong effectiveness of transformer-based self-supervised representations for the Medicinal Plant Diagnosis task.
-
+**Finding:** DINOv2 (ViT backbone) achieved the highest accuracy (98.07%), demonstrating the effectiveness of transformer-based self-supervised learning for this domain.
