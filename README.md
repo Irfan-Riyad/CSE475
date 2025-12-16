@@ -69,6 +69,18 @@ To improve overall model accuracy, we experimented with multiple **self-supervis
 - To further enhance representation learning, **Vision Transformer (ViT)** backbones were used for all SSL models **except SimCLR**.
 - Multiple feature extraction and fine-tuning strategies were evaluated across all SSL approaches.
 
+## Self-Supervised Model Performance
+
+| Model | Accuracy (%) | Downstream Classifier | Evaluation Report | Diagram |
+|------|-------------|----------------------|-------------------|---------|
+| **MoCo v3** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
+| **SimCLR** | 87.85% |  SVM | [View Report](#) | [View Diagram](#) |
+| **MEW** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
+| **BYOL** | XX.XX | MLP / SVM | [View Report](#) | [View Diagram](#) |
+| **DINOv2** | 98.07% | SVM | [View Report](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Dinov2_Report.pdf) | [View Diagram](https://github.com/Irfan-Riyad/CSE475/blob/main/Reports/SLL_Models_Report/Diagrams/Diagrams.pdf) |
+
+
+
 #### Best Result
 
 Among all SSL models, **DINOv2 with a ViT backbone** achieved the **highest accuracy of 97.05%**, making it the best-performing SSL method in our experiments.
