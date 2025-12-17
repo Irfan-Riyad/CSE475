@@ -73,6 +73,6 @@ To enhance feature representation and label efficiency, we experimented with sev
 | **MoCo v3** | 94.98% | SVM | *Coming Soon* |
 | **SimCLR** | 87.85% | SVM | *Coming Soon* |
 | **BYOL** | 85.48% | MLP | *Coming Soon* |
-| **MEW** | 82.41% | MLP | *Coming Soon* |
+| **MAE** | 82.41% | MLP | *Coming Soon* |
 
 **Finding:** DINOv2 (ViT backbone) achieved the highest accuracy (98.07%), demonstrating the effectiveness of transformer-based self-supervised learning for this domain.
